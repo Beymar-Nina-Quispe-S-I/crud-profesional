@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Services\Post\PostService;
-use Illuminate\Http\Request;
 use App\Http\Requests\Post\CreatePostRequest;
 use App\Http\Requests\Post\UpdatePostRequest;
 use App\Models\Post;
@@ -39,7 +38,7 @@ class PostController extends Controller
     public function store(CreatePostRequest $request)
     {
         $this->service->create($request->validated());
-        return redirect()->route('posts.index')->with('success', 'Post created successfully.');
+        return redirect()->route('posts.index')->with('success', 'Post creadop con exito.');
     }
 
     /**
